@@ -110,23 +110,23 @@ def load_data(city, month, day):
 
 
 def time_stats(df):
-    """Displays statistics on the most frequent times of travel."""
+    """Displays descriptive statistics on the most frequent times of travel."""
 
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
 
     
-    #Using mode to extract the most common month
+    #Using mode function to extract the most common month
     popular_month = df['month'].mode()[0]
     print('Most Popular Month (January as 1 and June as 6):', popular_month)
 
 
-    #Using mode to extract the most common day of the week
+    #Using mode function to extract the most common day of the week
     popular_day = df['day_of_week'].mode()[0]
     print('\nMost Popular Day:', popular_day)
 
                 
-    #Using mode to extract the most common hour
+    #Using mode function to extract the most common hour
     popular_hour = df['hour'].mode()[0]
     print('\nMost Popular Hour:', popular_hour)
 
