@@ -1,1 +1,4 @@
 .github/**
+##Ignore all .csv and the DS_store file
+*.csv
+*.DS_Store
