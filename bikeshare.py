@@ -22,13 +22,11 @@ def get_filters():
     
     #CITY FILTER
     city = ''
-    #This while loop will take the empty list above and input user data to filter by
+    #This while loop will take the empty list above and input user data to filter by. The lower function will standardize responses.
     while city not in CITY_DATA.keys():
         print('\nPlease choose a city to explore its bikeshare data: ')
         print('\nI can show you Chicago, New York City, or Washington!')
         city = input().lower()
-        #By the end of this loop, users will input which city they want to filter by
-        #By putting the lower function, I am making sure that all the inputs become standardized
         
         if city not in CITY_DATA.keys():
             print('\nPlease input a valid response. Remember you can choose from Chicago, New York City, or Washington!')
@@ -37,7 +35,7 @@ def get_filters():
     #This will confirm the user's city and present it to the user in title format
     
     #MONTH FILTER
-    #Now we will create another input but hold each month in a dictionary as to standardize the data
+    #Now we will create another input but hold each month in a dictionary as to standardize the data and use .lower() to standardize the responses.
     #I am going to put 'all' as the 7th key so the months match their chronological order best
     month_dict = {'january':1, 'february':2, 'march':3, 'april':4, 'may':5, 'june':6, 'all':7}
     month = ''
@@ -45,7 +43,6 @@ def get_filters():
         print('\nPlease choose a month to filter your city\'s data: ')
         print('\nPlease input the name of a month from January through June, or you can select all available months by inputting "All"')
         month = input().lower()
-        #This loop will prompt the user to input the month they want to filter by, and create a standard input using the lower function
     
         if month not in month_dict.keys():
             print('\nPlease input a valid response. Remember you can choose a month from January through June, or all months.')
